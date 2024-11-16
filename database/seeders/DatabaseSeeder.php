@@ -2,21 +2,29 @@
 
 namespace Database\Seeders;
 
-
-use App\Role;
+use App\Models\User;
+use App\Models\Role;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-class RoleTableSeeder extends Seeder
+use Illuminate\Support\Facades\Hash;
+
+class DatabaseSeeder extends Seeder
 {
-    public function run()
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
     {
-        $role = new Role();
-        $role->name = 'admin';
-        $role->description = 'Administrator';
-        $role->save();
-        $role = new Role();
-        $role->name = 'user';
-        $role->description = 'User';
-        $role->save();
         $this->call(RoleTableSeeder::class);
+
+        $user = User::create([
+            'name' => 'Administrador_1',
+            'email' => 'rojas_di_21@hotmail.com',
+            'password' => Hash::make('12345678'),
+        ]);
+
+        $user->roles()->attach(Role::where('id', 1)->first());
+
+        $user->save();
     }
 }

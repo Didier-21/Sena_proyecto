@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Role;
 use Illuminate\Database\Seeder;
 
 class RoleTableSeeder extends Seeder
@@ -12,8 +12,13 @@ class RoleTableSeeder extends Seeder
      */
     public function run(): void
     {
-        Role::create(['name' => 'admin', 'description' => 'Administrator']);
-        Role::create(['name' => 'user', 'description' => 'Normal User']);
-        //
+        $role = new Role();
+        $role->name = 'admin';
+        $role->description = 'Administrator';
+        $role->save();
+        $role = new Role();
+        $role->name = 'user';
+        $role->description = 'User';
+        $role->save();
     }
 }
