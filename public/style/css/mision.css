@@ -1,0 +1,94 @@
+/* Estilos para la tarjeta de misión */
+.mision-card {
+    border-radius: 15px !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    animation: fadeIn 1s ease;
+    background-color: #99cda4;
+}
+
+/* Estilos para el título */
+.mision-title {
+    color: #070746 !important;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* Línea divisora */
+.divider {
+    width: 50%;
+    height: 3px;
+    background-color: #098515;
+    margin: 2rem auto;
+    border: none;
+}
+
+/* Contenedor de la misión */
+.mision-content {
+    background-color: #c5ecb0;
+    padding: 2rem;
+    border-radius: 50px;
+    border-left: 5px #098515;
+    margin: 2rem 0;
+}
+
+.mision-content p {
+    line-height: 1,4;
+    color: #010710;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Estilos para el botón */
+.return-button {
+    background-color: #0906d1 !important;
+    border-color: hsl(0, 91%, 43%) !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: #9e5f49 !important;
+    border-color: #3f0303 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.return-button {
+    margin: 2rem 0;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 20;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 20;
+        transform: translateY(14);
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 900px) {
+    .mision-title {
+        font-size: 2rem;
+    }
+
+    .mision-content {
+        padding: 1.5rem;
+    }
+
+    .return-button {
+        padding: 0.5rem 1.5rem !important;
+    }
+}
+

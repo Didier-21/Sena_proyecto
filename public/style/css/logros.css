@@ -1,0 +1,108 @@
+/* logros.css */
+
+/* Estilo general del cuerpo */
+body {
+    background-color: #99cda4;
+    color: #070746;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Título principal */
+h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Tarjetas */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(11, 160, 43, 0.2);
+}
+
+.card img {
+    border-radius: 0.25rem;
+}
+
+/* Estilo para botones */
+.btn-primary {
+    background-color: #0906d1;
+    border-color: hsl(0, 91%, 43%);
+}
+
+.btn-primary:hover {
+    background-color: #9e5f49;
+    border-color: #3f0303;
+}
+.btn-primary {
+    display: block; /* Asegúrate de que sea un bloque */
+    margin: 0 auto; /* Esto centra el botón */
+    background-color: #0906d1;
+    border-color: hsl(0, 91%, 43%);
+}
+
+/* Modales */
+.modal-header {
+    background-color: #188b23;
+    color: #c5ecb0;
+}
+
+.modal-body {
+    font-size: 1rem;
+}
+
+.modal-body {
+    background-color:  #c5ecb0; /* Fondo del cuerpo del modal */
+    color: #343a40; /* Color del texto del cuerpo del modal */
+}
+
+/* Estilo para imágenes */
+.card-img-top {
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Mantener la proporción de la imagen */
+
+/* Botón regresar */
+.return-button {
+    background-color: #0906d1 !important;
+    border-color: hsl(0, 91%, 43%) !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: #9e5f49 !important;
+    border-color: #3f0303 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+}
+.return-button {
+    margin: 2rem 0;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+
+    .modal-body li {
+        padding: 0.75rem;
+    }
+}

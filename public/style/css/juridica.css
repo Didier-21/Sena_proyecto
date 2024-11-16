@@ -1,0 +1,176 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color:  #99cda4;
+}
+
+/* Estilos del encabezado */
+.header {
+    background: linear-gradient(135deg, #99cda4 0%, #98cda9 100%);
+    color: #070746;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px #070746;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #070746;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Estilos de las tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(188, 13, 13, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(14, 2, 123, 0.2);
+}
+
+.image-preview {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-preview img {
+    transition: transform 0.6s ease;
+    object-fit: cover;
+}
+
+.card:hover .image-preview img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: #070746;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #070746;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos de los botones */
+.btn-primary {
+    background-color: #0906d1;
+    border-color: hsl(0, 91%, 43%);
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #9e5f49;
+    transform: translateY(-2px);
+    border-color: #3f0303;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del modal */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    background-color:#188b23;
+    color: #0a0000;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 2rem;
+    }
+
+.modal-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-body li {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #c5ecb0;
+    border-radius: 8px;
+    border-left: 4px solid #0056b3;
+}
+
+.modal-body strong {
+    color: #72a0d2;
+}
+
+.close {
+    color: white;
+    opacity: 1;
+}
+
+.close:hover {
+    color: #f8f9fa;
+    opacity: 1;
+}
+
+/* Estilos del botón de retorno */
+.return-button {
+    margin: 2rem 0;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.return-button:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+
+    .modal-body li {
+        padding: 0.75rem;
+    }
+}

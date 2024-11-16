@@ -1,0 +1,503 @@
+/* Estilos generales y animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Hero Section mejorado */
+.hero-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+                url('/api/placeholder/1200/400');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(69, 13, 13);
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #0c4f1f40, #046d9a40);
+    animation: pulse 8s infinite;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(223, 50, 2, 0.3);
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out 0.3s backwards;
+}
+
+.hero-section .btn {
+    animation: fadeIn 1s ease-out 0.6s backwards;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #1604db, #347b89);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(17, 242, 17, 0.4);
+}
+
+.hero-section .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(164, 12, 76, 0.6);
+}
+
+/* Tarjetas de Niveles Educativos */
+.grado-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    background: rgb(20, 11, 100);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.grado-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(31, 5, 230, 0.2);
+}
+
+.grado-card img {
+    transition: all 0.5s ease;
+}
+
+.grado-card:hover img {
+    transform: scale(1.1);
+}
+
+.grado-card .card-body {
+    padding: 2rem;
+}
+
+.grado-card .card-title {
+    color: #791641;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.grado-card .card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(45deg, #17bc0b, #00ff8c);
+    transition: width 0.3s ease;
+}
+
+.grado-card:hover .card-title::after {
+    width: 100px;
+}
+
+/* Sección Rural */
+.rural-emphasis {
+    background: linear-gradient(135deg, #53a260, #969f98);
+    border-radius: 20px;
+    border-left: 8px solid #28a745;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(60, 2, 177, 0.1);
+    transition: all 0.3s ease;
+}
+
+.rural-emphasis:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(40, 167, 69, 0.2);
+}
+
+/* Sección de Valores */
+.valores-section {
+    background: linear-gradient(135deg, #dadcdd, #7c8fa1);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-box {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Modal mejorado */
+.modal-content {
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(45deg, #56d706, #078716);
+    padding: 1.5rem;
+    border: none;
+}
+
+.custom-form {
+    padding: 2rem;
+}
+
+.custom-form .form-control {
+    border-radius: 10px;
+    padding: 12px;
+    border: 3px solid #6a5a9f;
+    transition: all 0.3s ease;
+}
+
+.custom-form .form-control:focus {
+    box-shadow: none;
+    border-color: #1c0377;
+    transform: translateY(-2px);
+}
+
+.custom-form .btn {
+    background: linear-gradient(45deg, #032d5a, #5005b8);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.custom-form .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* Efectos de scroll */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .grado-card {
+        margin-bottom: 20px;
+    }
+
+    .icon-box {
+        font-size: 2.5rem;
+    }
+}
+
+/* Hover effects para listas */
+.rural-emphasis ul li, .grado-card ul li {
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.rural-emphasis ul li:before, .grado-card ul li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.rural-emphasis ul li:hover, .grado-card ul li:hover {
+    padding-left: 30px;
+    color: #007bff;
+}
+
+.rural-emphasis ul li:hover:before, .grado-card ul li:hover:before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Efecto de loading para botones */
+.btn-loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-loading:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    from { left: -100%; }
+    to { left: 100%; }
+}
+
+
+
+
+/* Hero Section Styles */
+.hero-section {
+    background: linear-gradient(rgba(211, 119, 119, 0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero-section .btn-primary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background: #c6fbb0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Image Styles */
+.card-img-top {
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Card Content Styles */
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: #4f1b30;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #1c039a;
+    line-height: 1.6;
+}
+
+/* Section Headers */
+h2 {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 200px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations to elements */
+.card {
+    animation: fadeInUp 0.5s ease backwards;
+}
+
+.row > div:nth-child(1) .card { animation-delay: 0.1s; }
+.row > div:nth-child(2) .card { animation-delay: 0.2s; }
+.row > div:nth-child(3) .card { animation-delay: 0.3s; }
+.row > div:nth-child(4) .card { animation-delay: 0.4s; }
+
+/* Hover Effects for Buttons */
+.btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Container Spacing */
+.container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .card-img-top,
+    .btn {
+        transition: none;
+        animation: none;
+    }
+}
+
+
+/* Estilos específicos para la sección de Media Técnica */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/agro-tech-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 0;
+    margin-bottom: 3rem;
+}
+
+/* Iconos de especialización */
+.fas {
+    color: #2ecc71;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .fas {
+    transform: scale(1.2);
+}
+
+/* Lista de competencias */
+.card ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+    color: #0c0c0c;
+}
+
+/* Sección de Alianzas */
+.alianzas .card {
+    height: 100%;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.alianzas .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efectos de hover mejorados */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Botones personalizados */
+.btn-primary {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    background-color: #27ae60;
+    border-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46,204,113,0.3);
+}
