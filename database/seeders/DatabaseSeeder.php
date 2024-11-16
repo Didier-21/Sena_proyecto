@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleTableSeeder::class);
 
         $user = User::create([
-            'name' => 'Administrador_1',
+            'name' => 'Didier Rojas',
             'email' => 'rojas_di_21@hotmail.com',
             'password' => Hash::make('12345678'),
         ]);

@@ -6,6 +6,16 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
+        <form class="d-flex" role="search">
+            @if (auth()->user())
+                <label for="" class="text-white">{{ auth()->user()->email }}</label>
+                <button class="btn btn-primary me-2" type="button"
+                    onclick="window.location.href='/logout'">Cerrar sesion</button>
+                @else
+                <button class="btn btn-primary me-2" type="button"
+                    onclick="window.location.href='/login'">Iniciar sesion</button>
+                @endif
+          </form>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

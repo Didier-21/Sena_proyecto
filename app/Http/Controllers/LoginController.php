@@ -5,47 +5,40 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
-    use AuthenticatesUsers;
-
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/dashboard'; // Cambia '/dashboard' a la ruta que desees
-
-    public function __construct()
+    public function showLoginForm()
     {
-        $this->middleware('guest')->except('logout');
+        return view('auth.login');
     }
 
-    public function create()
+    public function login(Request $request)
     {
-        return view('auth.login'); // Asegúrate de tener la vista correspondiente
-    }
-
-    public function store(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
 
         if (Auth::attempt($credentials)) {
-            // Redirigir al usuario después de un inicio de sesión exitoso
-            return redirect()->intended($this->redirectPath());
+            $request->session()->regenerate();
+
+            return redirect()->intended('dashboard');
         }
 
-        // Si falla el inicio de sesión, redirige de nuevo con error
         return back()->withErrors([
-            'email' => 'Las credenciales no coinciden.',
+            'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
         ]);
     }
 
-    public function destroy(Request $request)
+    public function logout(Request $request)
     {
         Auth::logout();
-        return redirect('/dashboard'); // Cambia esto por la redirección que desees
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('home');
     }
 }
