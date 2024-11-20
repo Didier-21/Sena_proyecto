@@ -10,36 +10,27 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PageController;
 
-use App\Http\Controllers\ProfileController;
 
-
-
-
+Route::get('/', function () {
+    return view('home');
+});
+Route::get('/proyectos', [ProyectoController::class, 'index'])->name('proyectos');
 Route::resource('/proyectos', ProyectoController::class);
 
 Route::resource('/practicas', PracticaController ::class);
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register.form');
 Route::post('register', [RegisterController::class, 'register'])->name('register');
 
 
-
-
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::resource('/gestion', GestionController::class);
-
-
-Route::middleware(['auth', 'role:admin'])->group(function () {
-    // Rutas solo para administradores
-});
-
 
 
 // Ruta para la Misión

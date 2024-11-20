@@ -1,30 +1,31 @@
-<!-- resources/views/dashboard.blade.php -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container mt-5">
-        <h1 class="text-center">Bienvenido al Dashboard</h1>
-        <p class="text-center">Selecciona una opción:</p>
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <a href="/ruta1" class="btn btn-primary btn-block">Ruta 1</a>
-            </div>
-            <div class="col-md-4">
-                <a href="/ruta2" class="btn btn-secondary btn-block">Ruta 2</a>
-            </div>
-            <div class="col-md-4">
-                <a href="/ruta3" class="btn btn-success btn-block">Ruta 3</a>
-            </div>
-        </div>
+@extends('layouts.app')
+
+@section('title', 'Dashboard - Institución Educativa Agropecuaria')
+
+@section('contenido')
+<header class="bg-white shadow-md rounded-lg p-4 mb-6">
+    <h1 class="text-3xl font-bold text-center text-green-700">Bienvenido a la Institución Educativa Agropecuaria</h1>
+    <p class="text-center text-gray-600">Tu espacio para aprender y crecer en el ámbito agropecuario.</p>
+</header>
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold text-green-600">Últimas Noticias</h2>
+        <p class="text-gray-700">Mantente informado sobre las últimas novedades y eventos en nuestra institución.</p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold text-green-600">Cursos Disponibles</h2>
+        <p class="text-gray-700">Explora nuestros cursos y programas educativos en el área agropecuaria.</p>
+        <a href="#" class="btn btn-primary">leeer mas </a>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold text-green-600">Recursos Educativos</h2>
+        <p class="text-gray-700">Accede a materiales y recursos que te ayudarán en tu aprendizaje.</p>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold text-green-600">Proyectos</h2>
+        <p class="text-gray-700">Explora los proyectos que afrece nuestra institucion educativa.</p>
+        <a href="/proyectos" class="btn btn-primary"> Ver Proyectos </a>
+    </div>
+</section>
+@endsection
