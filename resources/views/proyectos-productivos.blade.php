@@ -1,24 +1,9 @@
+<link rel="stylesheet" href="style/css/primaria.css">
 @extends('layouts.app')
-
 
 @section('title', 'Proyecto - Institución Educativa San José')
 
 @section('contenido')
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos Productivos - I.E. San José</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="style/css/primaria.css">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-
-</head>
-
 <section class="hero-section text-center">
     <div class="container">
         <h1 class="text-center text-primary mb-4">
@@ -376,8 +361,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 
     <script>
         // Configuración de los gráficos
@@ -536,6 +520,4 @@
             });
         });
     </script>
-</body>
-</html>
 @endsection
