@@ -1,4 +1,8 @@
+@extends('layouts.app')
 
+@section('title', 'Dashboard - Institución Educativa Agropecuaria')
+
+@section('contenido')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,10 +47,9 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="style/js/vision.js"></script>
 </body>
 
 </html>
+@endsection
 
 

@@ -1,4 +1,4 @@
-
+@extends('layouts.app')
 
 @section('titulo', 'Crear proyecto')
 

@@ -26,5 +26,15 @@ class DatabaseSeeder extends Seeder
         $user->roles()->attach(Role::where('id', 1)->first());
 
         $user->save();
+
+        $user = User::create([
+            'name' => 'JHON HENRRY',
+            'email' => 'poljaho@gmail.com',
+            'password' => Hash::make('12345678'),
+        ]);
+
+        $user->roles()->attach(Role::where('id', 1)->first());
+
+        $user->save();
     }
 }

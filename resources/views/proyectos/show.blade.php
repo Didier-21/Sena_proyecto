@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('titulo', 'Detalle Proyecto')
+
 
 @section('contenido')
 
@@ -27,8 +27,6 @@
 <div class="d-flex justify-content-center">
 <a href="{{ route('proyectos.index') }}" class="btn btn-secondary mt-3">Volver a la lista de proyectos</a>
 </div>
-
-
 @endsection
 
 

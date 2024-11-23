@@ -1,0 +1,255 @@
+
+
+
+       /* Estilos personalizados */
+        body {
+            background-color: #a8a36a;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #26630c, #0fca63, #a7c162); /* Degradado de izquierda a derecha */
+            transition: background 0.3s ease;
+        }
+
+        .navbar-brand, .nav-link, .navbar-toggler-icon {
+            color: rgb(46, 19, 200) !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #ac3131 !important;
+        }
+
+        .dropdown-menu {
+            background-color: #890575;
+            border: none;
+        }
+
+        .dropdown-item {
+            color: rgb(49, 166, 16);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #a3ce08;
+            color: #4CAF50;
+        }
+
+        .btn-success, .btn-primary {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-success:hover {
+            background-color: #7c991b;
+            color: rgb(97, 13, 13);
+        }
+
+        .btn-primary:hover {
+            background-color: #1976D2;
+            color: rgb(123, 36, 36);
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: transparent;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+/* Estilo básico para todos los botones */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid transparent; /* Borde por defecto */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+/* Estilo específico para el estado normal de botones exitosos */
+.btn-success {
+    background: linear-gradient(to right, #26630c, #0fca63, #a7c162); /* Color de fondo */
+    color: rgb(46, 19, 200); /* Color de texto */
+}
+
+/* Cambios en el estado al pasar el ratón por encima */
+.btn-success:hover {
+    background-color: #218838; /* Color de fondo en hover */
+    border-color: #1e7e34; /* Color del borde en hover */
+}
+
+/* Cambios en el estado al hacer clic */
+.btn-success:active {
+    transform: scale(0.95); /* Efecto de reducción al hacer clic */
+}
+
+/* Estilos para que el botón se vea más prominente */
+.btn-success {
+    box-shadow: 0 4px 8px rgba(133, 15, 15, 0.2); /* Sombra sutil */
+}
+
+/* Opción de mostrar un efecto de enfoque - útil para la accesibilidad */
+.btn-success:focus {
+    outline: none; /* Eliminar contorno por defecto */
+    box-shadow: 0 0 0 0.2rem rgba(110, 222, 5, 0.5); /* Sombra de enfoque */
+}
+
+/* Estilo para el formulario - opcional */
+.d-flex {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para el texto del usuario */
+
+.text-white {
+   color: rgb(185, 184, 180); /* Color del texto */
+   margin-right: 10px; /* Espacio a la derecha */
+   font-size: 14px; /* Tamaño del texto */
+}
+
+
+
+
+
+.footer {
+    background: linear-gradient(to right, #26630c, #0fca63, #a7c162); /* Degradado de izquierda a derecha */
+    transition: background 0.3s ease;
+    color: rgb(46, 19, 200);
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #340fc8;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: #3498DB;
+}
+
+.contact-info {
+    line-height: 1.8;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #3498DB;
+    width: 20px;
+    text-align: center;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.social-btn i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.social-btn.facebook {
+    background: #1877F2;
+}
+
+.social-btn.twitter {
+    background: #1DA1F2;
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.social-btn.youtube {
+    background: #FF0000;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a2632;
+    margin-top: 20px;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.visitor-counter {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.visitor-counter h4 {
+    color: #3498DB;
+    margin-bottom: 10px;
+}
+
+.counter-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}

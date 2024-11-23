@@ -1,14 +1,8 @@
-<!-- resources/views/create.blade.php -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Gestión Institucional</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('title', 'Crear Gestión Institucional')
+
+@section('contenido')
     <div class="container mt-5">
         <div class="card">
             <div class="card-header">
@@ -21,22 +15,19 @@
                         <label for="tipo">Tipo</label>
                         <select id="tipo" name="tipo" class="form-control" required>
                             <option value="" disabled selected>Seleccione un Tipo de Gestión</option>
-                            <option value="Tipo1">Gestión Administrativa</option>
-                            <option value="Tipo2">Gestión Academica</option>s
-
+                            <option value="GA.ADMIN">Gestión Administrativa</option>
+                            <option value="GA.ACADE">Gestión Académica</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="clase">Clase</label>
                         <select id="clase" name="clase" class="form-control" required>
                             <option value="" disabled selected>Seleccione una Opción</option>
-                            <option value="Clase1">Estrategico</option>
+                            <option value="Clase1">Estratégico</option>
                             <option value="Clase2">Docencia</option>
                             <option value="Clase3">Investigación</option>
-                            <option value="Clase3">Apoyo Academico</option>
-                            <option value="Clase3">Apoyo Integral</option>
-
-
+                            <option value="Clase4">Apoyo Académico</option>
+                            <option value="Clase5">Apoyo Integral</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -60,10 +51,4 @@
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+@endsection

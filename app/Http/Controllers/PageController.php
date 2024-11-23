@@ -53,7 +53,20 @@ class PageController extends Controller
 
     public function docentes()
     {
-        return view('docentes'); // Retorna la vista de media tecnica
+        return view('docentes'); // Retorna la vista de docentes
+
+    }
+
+    public function administrativos()
+    {
+        return view('administrativos'); // Retorna la vista de administrativos
+
+    }
+
+    public function directivos()
+    {
+        return view('directivos'); // Retorna la vista de directivos
+
     }
 }
 

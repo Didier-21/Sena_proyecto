@@ -1,4 +1,4 @@
-
+@extends('layouts.app')
 
 @section('titulo', 'Listado Proyectos CDR')
 
