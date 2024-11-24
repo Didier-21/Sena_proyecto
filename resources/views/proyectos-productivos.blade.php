@@ -1,9 +1,10 @@
-<link rel="stylesheet" href="style/css/primaria.css">
+
 @extends('layouts.app')
 
 @section('title', 'Proyecto - Institución Educativa San José')
 
 @section('contenido')
+<link rel="stylesheet" href="style/css/primaria.css">
 <section class="hero-section text-center">
     <div class="container">
         <h1 class="text-center text-primary mb-4">

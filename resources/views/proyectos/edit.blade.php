@@ -1,103 +1,74 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Editar Proyecto Productivo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fondo suave */
+            color: #333; /* Color de texto */
+        }
+        .form-container {
+            background-color: #fff; /* Fondo blanco para el cuadro */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            padding: 30px; /* Espaciado interno */
+            max-width: 600px; /* Ancho máximo del cuadro */
+            margin: 50px auto; /* Centrar el cuadro en el medio de la página */
+        }
+        h3 {
+            margin-bottom: 20px; /* Espaciado inferior en el encabezado */
+        }
+        .form-label {
+            font-weight: bold; /* Resaltar las etiquetas */
+        }
+        button {
+            margin-top: 20px; /* Espaciado superior del botón */
+        }
+    </style>
+</head>
+<body>
 
-@section('titulo', 'Editar proyecto productivo')
+<div class="form-container">
+    <h3 class="text-center">MÓDULO DE EDITAR<br>PROYECTO PRODUCTIVO</h3>
+    {{-- Se utiliza el atributo enctype para poder subir archivos --}}
+    <form action="/proyectos/{{$proyectoa->id}}" method="POST" enctype="multipart/form-data">
+        @method('PUT')
+        @csrf
 
-@section('contenido')
-
-<h3 class="text-center">MODULO DE EDITAR
-    <br>
-    PROYECTO PRODUCTIVO
-</h3>
-{{--se utiliza el atributo enctype para poder subir archivos--}}
-<form action="/proyectos/{{$proyectoa->id}}" method="POST" enctype="multipart/form-data">
-    @method('PUT')
-    @csrf
-    <div class="mb-3">
-        <label for="NOMBRE" class="form-label">MODIFIQUE EL NOMBRE DEL PROYECTO</label>
-        <input type="varchar" value="{{$proyectoa->nombre}}" class="form-control" id="nombre" name="nombre" class="form-control">
-      </div>
-
-      <div class="mb-3">
-          <label for="TIPO PROYECTO" class="form-label">MODIFIQUE EL TIPO DE PROYECTO</label>
-          <input type="varchar" value="{{$proyectoa->tipo}}" class="form-control" id="tipo" name="tipo" class="form-control">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">MODIFIQUE EL NOMBRE DEL PROYECTO</label>
+            <input type="text" value="{{$proyectoa->nombre}}" class="form-control" id="nombre" name="nombre" required>
         </div>
 
-      <div class="mb-3">
-          <label for="CANTIDAD" class="form-label">MODIFIQUE LA CANTIDAD DE ANIMALES</label>
-          <input type="double" value="{{$proyectoa->cantidad}}" class="form-control" id="cantidad" name="cantidad" class="form-control">
-      </div>
+        <div class="mb-3">
+            <label for="tipo" class="form-label">MODIFIQUE EL TIPO DE PROYECTO</label>
+            <input type="text" value="{{$proyectoa->tipo}}" class="form-control" id="tipo" name="tipo" required>
+        </div>
 
-      <div class="mb-3">
-          <label for="VALOR" class="form-label">AGREGUE UN NUEVO VALOR</label>
-          <input type="double" value="{{$proyectoa->valor}}" class="form-control" id="valor" name="valor"class="form-control">
-      </div>
+        <div class="mb-3">
+            <label for="cantidad" class="form-label">MODIFIQUE LA CANTIDAD DE ANIMALES</label>
+            <input type="number" value="{{$proyectoa->cantidad}}" class="form-control" id="cantidad" name="cantidad" step="0.01" required>
+        </div>
 
-      <div class="mb-3">
-          <label for="imagen">AGREGUE UNA FACTURA O SOPORTE NUEVA</label>
-      <br>
-          <input type="file" id="imagen" name="imagen">
+        <div class="mb-3">
+            <label for="valor" class="form-label">AGREGUE UN NUEVO VALOR</label>
+            <input type="number" value="{{$proyectoa->valor}}" class="form-control" id="valor" name="valor" step="0.01" required>
+        </div>
 
-      </div>
-      <br>
-      <button type="submit" class="btn btn-success">ACTUALIZAR</button>
-  </form>
+        <div class="mb-3">
+            <label for="imagen" class="form-label">AGREGUE UNA FACTURA O SOPORTE NUEVO</label>
+            <input type="file" id="imagen" name="imagen" class="form-control-file" required>
+        </div>
 
-  <style>
-    body {
-        font-family: 'Arial', sans-serif; /* Fuente general */
-        background-color: #93dcec; /* Color de fondo */
-        margin: 0;
-        padding: 20px;
-    }
+        <button type="submit" class="btn btn-success btn-lg btn-block">ACTUALIZAR</button>
+    </form>
+</div>
 
-    .container {
-        max-width: 1000px; /* Ancho máximo del contenedor */
-        margin: 0 auto; /* Centrar el contenedor */
-        padding: 20px;
-        background-color: #93dcec; /* Color de fondo del contenedor */
-        border-radius: 20px; /* Bordes redondeados */
-        box-shadow: 0 4px 8px rgba(43, 20, 126, 0.1); /* Sombra */
-    }
-
-    h3.text-center {
-        text-align: center; /* Centrar el texto */
-        color: #18ea09; /* Color del texto */
-        font-size: 30px; /* Tamaño de fuente */
-        margin-bottom: 20px; /* Espaciado inferior */
-    }
-
-    .form-label {
-        font-weight: bold; /* Negrita para las etiquetas */
-        color: #555; /* Color del texto de las etiquetas */
-    }
-
-    .form-control {
-        width: 100%; /* Ancho completo */
-        padding: 10px; /* Espaciado interno */
-        margin-bottom: 15px; /* Espaciado inferior */
-        border: 1px solid #ccc; /* Borde */
-        border-radius: 5px; /* Bordes redondeados */
-        font-size: 16px; /* Tamaño de fuente */
-    }
-
-    .btn {
-        display: inline-block; /* Mostrar inline con otros elementos */
-        padding: 10px 20px; /* Espaciado interno */
-        border: none; /* Sin borde */
-        border-radius: 5px; /* Bordes redondeados */
-        font-size: 16px; /* Tamaño de fuente */
-        cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
-        transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
-    }
-
-    .btn-success {
-        background-color: #28a745; /* Color de fondo del botón */
-        color: white; /* Color del texto del botón */
-    }
-
-    .btn-success:hover {
-        background-color: #218838; /* Color de fondo del botón al pasar el mouse */
-    }
-</style>
-
-@endsection
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

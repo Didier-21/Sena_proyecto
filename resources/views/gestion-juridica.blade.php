@@ -1,9 +1,10 @@
-<link href="style/css/juridica.css" rel="stylesheet">
+
 @extends('layouts.app')
 
 @section('title', 'MISIÓN - Institución Educativa Agropecuaria')
 
 @section('contenido')
+<link href="style/css/juridica.css" rel="stylesheet">
     <div class="header">
         <h1> Componente Legal Institución Educativa San José</h1>
         <p>Comprometido con la educación de calidad y la normatividad vigente.</p>

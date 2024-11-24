@@ -39,7 +39,7 @@ class ProyectoController extends Controller
             $proyectoa->imagen = $request->file('imagen')->store('public/proyectos');
             }
         $proyectoa->save();
-        return 'Guardado con éxito el proyecto productivo del colegio San Jose en Ingreso';
+        return redirect()->route('proyectos.index')->with('success', 'SE GUARDO CON ÉXITO AL PROYECTO PRODUCTIVO');
     }
 
     /**
@@ -70,7 +70,7 @@ class ProyectoController extends Controller
         if($request->hasFile('imagen')){
         $proyectoa->imagen = $request->file('imagen')->store('public/proyectos');
         $proyectoa->save();
-        return 'LA MODIFICACION SE REALIZO CON EXITO AL PROYECTO PRODUCTIVO';
+        return redirect()->route('proyectos.index')->with('success', 'LA MODIFICACIÓN SE REALIZÓ CON ÉXITO AL PROYECTO PRODUCTIVO');
     }
 
 
@@ -90,7 +90,7 @@ class ProyectoController extends Controller
         // Eliminar el proyecto
         $proyectoa->delete();
         // Redirigir a la vista de lista de proyectos con un mensaje de éxito
-        return redirect()->route('proyectos.index')->with('success', 'El proyecto se ha eliminado con éxito.');
+        return redirect()->route('proyectos.index')->with('success', 'EL PROYECTO FUE ELIMINADO CON EXITO.');
     } else {
         // Si no se encontró el proyecto, redirigir con un mensaje de error
         return redirect()->route('proyectos.index')->with('error', 'El proyecto no fue encontrado.');

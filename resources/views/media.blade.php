@@ -1,9 +1,10 @@
-<link rel="stylesheet" href="style/css/primaria.css">
+
 @extends('layouts.app')
 
 @section('title', 'Media')
 
 @section('contenido')
+<link rel="stylesheet" href="style/css/primaria.css">
 <!-- Sección de Media Técnica -->
 <div class="hero-section text-center">
     <div class="container">

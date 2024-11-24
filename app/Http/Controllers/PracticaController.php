@@ -38,7 +38,7 @@ class PracticaController extends Controller
         $practice->docente = $request->input('docente');
 
         $practice->save();
-        return 'SE GUARDO CON EXITO LA PRACTICA AGROPECUARIA REALIZADA';
+        return redirect()->route('practicas.index')->with('success', 'SE CREO CON ÉXITO LA PRÁCTICA AGROPECUARIA');
     }
 
     /**
@@ -63,21 +63,24 @@ class PracticaController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
-        $practice = Practica::findOrFail($id);
+{
+    $practice = Practica::findOrFail($id);
 
-        // Actualizar los campos con los datos del formulario.
-        $practice->tipo_proyecto = $request->input('tipo_proyecto');
-        $practice->grado = $request->input('grado');
-        $practice->apellidos_nombres = $request->input('apellidos_nombres');
-        $practice->horas = $request->input('horas');
-        $practice->docente = $request->input('docente');
+    // Actualizar los campos con los datos del formulario.
+    $practice->tipo_proyecto = $request->input('tipo_proyecto');
+    $practice->grado = $request->input('grado');
+    $practice->apellidos_nombres = $request->input('apellidos_nombres');
+    $practice->horas = $request->input('horas');
+    $practice->docente = $request->input('docente');
 
-        // Guardar los cambios en la base de datos.
-        $practice->save();
+    // Guardar los cambios en la base de datos.
+    $practice->save();
 
-        return 'SE ACTUALIZÓ CON ÉXITO LA PRÁCTICA AGROPECUARIA';//
-    }
+    // Redirigir a una página específica con un mensaje de éxito.
+    return redirect()->route('practicas.index')->with('success', 'SE ACTUALIZÓ CON ÉXITO LA PRÁCTICA AGROPECUARIA');
+
+}
+
 
     /**
      * Remove the specified resource from storage.
@@ -90,7 +93,7 @@ class PracticaController extends Controller
     // Eliminar la práctica de la base de datos.
     $practice->delete();
 
-    return 'SE ELIMINÓ CON ÉXITO LA PRÁCTICA AGROPECUARIA';
+    return redirect()->route('practicas.index')->with('success', 'SE ELIMINO CON ÉXITO LA PRÁCTICA AGROPECUARIA');
         //
     }
 }

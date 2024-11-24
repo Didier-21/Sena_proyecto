@@ -1,9 +1,10 @@
-<link rel="stylesheet" href="style/css/primaria.css">
+
 @extends('layouts.app')
 
 @section('title', 'Secundaria')
 
 @section('contenido')
+<link rel="stylesheet" href="style/css/primaria.css">
 <!-- Sección de Secundaria -->
 <div class="hero-section text-center">
     <div class="container">

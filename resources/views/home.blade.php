@@ -1,9 +1,10 @@
-    <link rel="stylesheet" href="style/css/home.css">
+
 @extends('layouts.app')
 
 @section('title', 'HOME - Institución Educativa Agropecuaria')
 
 @section('contenido')
+<link rel="stylesheet" href="style/css/home.css">
     <!-- Hero Section con Bienvenida -->
     <header class="hero min-vh-100 d-flex align-items-center bg-light">
         <div class="container">

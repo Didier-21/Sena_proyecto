@@ -1,0 +1,162 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: #4caf50; /* Verde para los títulos */
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    color: #666666; /* Gris para el texto */
+}
+
+/* Estilos de la sección de noticias */
+#noticias {
+    padding: 40px 20px;
+    background-color: #e9f5e9; /* Fondo claro para la sección de noticias */
+    border-radius: 8px;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos de las imágenes de las cartas */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Estilos de los botones */
+.btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-outline-success {
+    border: 2px solid #4caf50;
+    color: #4caf50;
+    background-color: transparent;
+}
+
+.btn-outline-success:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Estilos de los modales */
+.modal-content {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    color: #4caf50;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Estilos para los cursos */
+.mt-4 {
+    margin-top: 20px;
+}
+
+h3 {
+    color: #4caf50; /* Verde para los subtítulos de los cursos */
+}
+
+img {
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los textos de los cursos */
+.text-gray-600 {
+    color: #666666;
+}
+
+.text-gray-700 {
+    color: #444444;
+}
+
+/* Estilos para los badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.bg-success {
+    background-color: #28a745;
+}
+
+.bg-primary {
+    background-color: #007bff;
+}
+
+.bg-warning {
+    background-color: #ffc107;
+}
+
+/* Estilos para los modales de pensum académico */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+}
+
+/* Mostrar el modal */
+.modal.show {
+    display: block;
+}

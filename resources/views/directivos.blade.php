@@ -1,9 +1,10 @@
-<link rel="stylesheet" href="style/css/primaria.css">
+
 @extends('layouts.app')
 
 @section('title', 'Equipo Directivo - Institución Educativa San José')
 
 @section('contenido')
+<link rel="stylesheet" href="style/css/primaria.css">
     <!-- Hero Section para Equipo Directivo -->
     <div class="hero-section text-center">
         <div class="container">

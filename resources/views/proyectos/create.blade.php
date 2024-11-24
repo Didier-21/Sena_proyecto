@@ -1,94 +1,67 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Proyecto Productivo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.75rem;
+            color: #343a40;
+        }
+        .btn-custom {
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #218838;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
 
-@section('titulo', 'Crear proyecto')
-
-@section('contenido')
-
-<br>
-    <h3>INGRESAR EL PROYECTO PRODUCTIVO</h3>
+<div class="form-container">
+    <h3 class="form-title">INGRESAR EL PROYECTO PRODUCTIVO</h3>
     <form action="/proyectos" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-          <label for="NOMBRE" class="form-label">NOMBRE</label>
-          <input type="varchar" class="form-control" id="nombre" name="nombre">
+            <label for="nombre" class="form-label">NOMBRE</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
         </div>
-
         <div class="mb-3">
-            <label for="TIPO PROYECTO" class="form-label">TIPO DE PROYECTO</label>
-            <input type="varchar" class="form-control" id="tipo" name="tipo">
-          </div>
-
-        <div class="mb-3">
-            <label for="CANTIDAD" class="form-label">CANTIDAD</label>
-            <input type="double" class="form-control" id="cantidad" name="cantidad">
+            <label for="tipo" class="form-label">TIPO DE PROYECTO</label>
+            <input type="text" class="form-control" id="tipo" name="tipo" required>
         </div>
-
         <div class="mb-3">
-            <label for="VALOR" class="form-label">VALOR</label>
-            <input type="double" class="form-control" id="valor" name="valor">
+            <label for="cantidad" class="form-label">CANTIDAD</label>
+            <input type="number" step="0.01" class="form-control" id="cantidad" name="cantidad" required>
         </div>
-
+        <div class="mb-3">
+            <label for="valor" class="form-label">VALOR</label>
+            <input type="number" step="0.01" class="form-control" id="valor" name="valor" required>
+        </div>
         <div class="mb-3">
             <label for="imagen" class="form-label">FACTURA O SOPORTE</label>
-        <br>
-            <input type="file" id="imagen" name="imagen">
-
+            <input type="file" class="form-control" id="imagen" name="imagen">
         </div>
-        <br>
-        <button type="submit" class="btn btn-success">Guardar</button>
+        <button type="submit" class="btn btn-success btn-custom">Guardar</button>
     </form>
-<link rel="stylesheet" href="{{asset("css/app.css")}}">
+</div>
 
-
-
-
-<style>
-    body {
-        background-color: #93dcec;
-    }
-
-    .form-container {
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-        padding: 30px;
-        margin-top: 30px;
-        animation: fadeIn 1s ease-in-out;
-    }
-
-    .form-label {
-        color: #343a40;
-        font-weight: bold;
-    }
-
-    .form-control {
-        border-radius: 5px;
-        transition: all 0.3s ease;
-    }
-
-    .form-control:focus {
-        border-color: #28a745;
-        box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
-    }
-
-    .btn-success {
-        background-color: #28a745;
-        border-color: #28a745;
-        transition: background-color 0.3s ease;
-    }
-
-    .btn-success:hover {
-        background-color: #218838;
-        border-color: #1e7e34;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity
-
-
-@endsection
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

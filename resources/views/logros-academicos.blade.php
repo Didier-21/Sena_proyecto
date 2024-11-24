@@ -1,9 +1,10 @@
-<link rel="stylesheet" href="style/css/logros.css">
+
 @extends('layouts.app')
 
 @section('title', 'Dashboard - Institución Educativa Agropecuaria')
 
 @section('contenido')
+<link rel="stylesheet" href="style/css/logros.css">
     <div class="container mt-5">
         <h1 class="text-center">Logros Académicos - Institución Educativa San José</h1>
         <div class="row mt-4">

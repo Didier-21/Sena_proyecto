@@ -1,9 +1,10 @@
-<link rel="stylesheet" href="style/css/mision.css">
+
 @extends('layouts.app')
 
 @section('title', 'MISIÓN - Institución Educativa Agropecuaria')
 
 @section('contenido')
+<link rel="stylesheet" href="style/css/mision.css">
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">

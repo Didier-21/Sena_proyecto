@@ -3,10 +3,14 @@
 @section('title', 'Dashboard - Institución Educativa Agropecuaria')
 
 @section('contenido')
+<link rel="stylesheet" href="style/css/plataforma.css">
+<link rel="stylesheet" href="style/css/primaria.css">
+
+
     <header class="bg-white shadow-md rounded-lg p-4 mb-6">
         <h1 class="text-3xl font-bold text-center text-green-700">Bienvenido a la Institución Educativa San José CDR</h1>
+        <h2 class="text-3xl font-bold text-center text-green-700">Panel de Control Usuario</h2>
         <p class="text-center text-gray-600">Tu espacio para aprender y crecer en el ámbito agropecuario.</p>
-
 
 
 
@@ -106,34 +110,137 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Cursos disponibles sección -->
+
+<h2 class="text-3xl font-bold text-center text-green-700">Cursos Disponibles Gratuitos</h2>
+<div class="container mt-4">
+    <div class="row">
+        <!-- Curso: Manejo de Residuos y Reciclaje -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="images/reciclajecurso.jpeg" alt="Curso de Manejo de Residuos y Reciclaje" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-green-500">Curso de Manejo de Residuos y Reciclaje en Nuestra Finca</h5>
+                    <p class="card-text"><strong>Intensidad Horaria:</strong> 100 horas</p>
+                    <p class="card-text"><strong>Modalidad:</strong> Presencial</p>
+                    <p class="card-text"><strong>Certificación:</strong> O.N.G VIDA Y ALEGRIA EN EL CAMPO</p>
+                    <p class="card-text">Descripción: Este curso aborda la importancia del manejo adecuado de residuos en entornos agrícolas. Se enseña sobre la clasificación, el reciclaje y la implementación de prácticas sostenibles en la finca.</p>
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalResiduos">Ver Pensum Académico</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curso: Hidropónico -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="images/hidrocurso.jpeg" alt="Curso Hidropónico" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-green-500">Curso Hidropónico con Énfasis en Sostenimiento Familiar</h5>
+                    <p class="card-text"><strong>Intensidad Horaria:</strong> 80 horas</p>
+                    <p class="card-text"><strong>Modalidad:</strong> Presencial</p>
+                    <p class="card-text"><strong>Certificación:</strong> Universidad Real Academia </p>
+                    <p class="card-text">Descripción: Este curso ofrece un enfoque práctico sobre técnicas de cultivo hidropónico, ideal para promover la sostenibilidad en el hogar. Se aprenderá sobre sistemas hidropónicos, mantenimiento y optimización de recursos.</p>
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalHidroponico">Ver Pensum Académico</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Pensum Académico (Manejo de Residuos) -->
+<div class="modal fade" id="modalResiduos" tabindex="-1" aria-labelledby="modalResiduosLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalResiduosLabel">Pensum Académico - Manejo de Residuos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Introducción al Manejo de Residuos</li>
+                    <li>Tipos de Residuos en la Agricultura</li>
+                    <li>Prácticas de Reciclaje</li>
+                    <li>Planificación de una Finca Sostenible</li>
+                    <li>Evaluación y Cierre</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="pdf/formulariocurso.pdf"" class="btn btn-primary" download="formato.pdf">Descargar Formulario</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Pensum Académico (Hidroponía) -->
+<div class="modal fade" id="modalHidroponico" tabindex="-1" aria-labelledby="modalHidroponicoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalHidroponicoLabel">Pensum Académico - Hidropónico</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Introducción a la Hidroponía</li>
+                    <li>Sistemas Hidropónicos Comunes</li>
+                    <li>Mantenimiento y Nutrición de Plantas</li>
+                    <li>Producción Sostenible en el Hogar</li>
+                    <li>Evaluación y Cierre</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="pdf/formulariocurso.pdf" class="btn btn-primary" download="formato.pdf">Descargar Formulario</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    <div class="bg-white p-4 rounded-lg shadow-md">
-        <h2 class="text-xl font-semibold text-green-600">Cursos Disponibles</h2>
-        <p class="text-gray-700">Explora nuestros cursos y programas educativos en el área agropecuaria.</p>
-        <a href="#" class="btn btn-primary">leeer mas </a>
+<!-- Plataforma solo para administradores sección -->
+
+<div class="container mx-auto p-5" style="background-image: url('ruta/a/tu-imagen.jpg'); background-size: cover; background-position: center;">
+    <!-- Contenedor Principal que enmarca todo -->
+    <div class="bg-gray-100 p-6 rounded-lg shadow-lg border border-gray-300 bg-opacity-75">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Sección Proyectos -->
+            <div class="bg-white p-4 rounded-lg shadow-md border border-green-200 transition-transform transform hover:scale-105 hover:shadow-lg flex flex-col items-center justify-center text-center">
+                <h2 class="text-xl font-semibold text-green-600">PROYECTOS</h2>
+                <p class="text-gray-700">Proyectos y valores que se realizan con los estudiantes.</p>
+                <div class="mt-4 flex flex-col space-y-2 items-center">
+                    <a href="/proyectos" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="/proyectos/create" class="btn btn-primary">CREAR Proyectos</a>
+                </div>
+            </div>
+
+            <!-- Sección Gestiones -->
+            <div class="bg-white p-4 rounded-lg shadow-md border border-green-200 transition-transform transform hover:scale-105 hover:shadow-lg flex flex-col items-center justify-center text-center">
+                <h2 class="text-xl font-semibold text-green-600">GESTIONES</h2>
+                <p class="text-gray-700">Gestiones realizadas en la vigencia.</p>
+                <div class="mt-4 flex flex-col space-y-2 items-center">
+                    <a href="/gestion" class="btn btn-primary">VER Y CREAR GESTIONES</a>
+                </div>
+            </div>
+
+            <!-- Sección Prácticas -->
+            <div class="bg-white p-4 rounded-lg shadow-md border border-green-200 transition-transform transform hover:scale-105 hover:shadow-lg flex flex-col items-center justify-center text-center">
+                <h2 class="text-xl font-semibold text-green-600">PRACTICAS</h2>
+                <p class="text-gray-700">Prácticas Agropecuarias.</p>
+                <div class="mt-4 flex flex-col space-y-2 items-center">
+                    <a href="/practicas" class="btn btn-primary">Ver PRACTICAS</a>
+                    <a href="/practicas/create" class="btn btn-primary">CREAR PRACTICA AGROPECUARIA</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="bg-white p-4 rounded-lg shadow-md">
-        <h2 class="text-xl font-semibold text-green-600">Recursos Educativos</h2>
-        <p class="text-gray-700">Accede a materiales y recursos que te ayudarán en tu aprendizaje.</p>
-    </div>
-    <div class="bg-white p-4 rounded-lg shadow-md">
-        <h2 class="text-xl font-semibold text-green-600">PROYECTOS</h2>
-        <p class="text-gray-700">Proyectos y valores que se realizan con los estudiantes.</p>
-        <a href="/proyectos" class="btn btn-primary"> Ver Proyectos </a>
-        <a href="/proyectos/create" class="btn btn-primary"> CREAR Proyectos </a>
-    </div>
-    <div class="bg-white p-4 rounded-lg shadow-md">
-        <h2 class="text-xl font-semibold text-green-600">GESTIONES</h2>
-        <p class="text-gray-700">Gestiones REalizadas en la vigencia.</p>
-        <a href="/gestion" class="btn btn-primary"> VER Y CREAR GESTIONES </a>
-    </div>
-    <div class="bg-white p-4 rounded-lg shadow-md">
-        <h2 class="text-xl font-semibold text-green-600">PRACTICAS</h2>
-        <p class="text-gray-700">Practicas Agropecuarias.</p>
-        <a href="/practicas" class="btn btn-primary"> Ver PRACTICAS </a>
-        <a href="/practicas/create" class="btn btn-primary"> CREAR PRACTICA AGROPECUARIA </a>
-    </div>
+</div>
+@if(Auth::check() && Auth::user()->email === 'poljaho@gmail.com')
+    <a href="/practicas/create" class="btn btn-primary">CREAR PRACTICA AGROPECUARIA</a>
+@endif
+
+
+
+
 </section>
 @endsection
