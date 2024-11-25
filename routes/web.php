@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/proyectos', [ProyectoController::class, 'index'])->name('proyectos');
-Route::resource('/proyectos', ProyectoController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/proyectos', [ProyectoController::class, 'index'])->name('proyectos');
+    Route::resource('/proyectos', ProyectoController::class);
+});
+// ->middleware('role:admin');
 
 Route::resource('/practicas', PracticaController ::class);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
