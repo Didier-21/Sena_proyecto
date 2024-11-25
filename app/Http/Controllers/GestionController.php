@@ -33,7 +33,7 @@ class GestionController extends Controller
             $gestione->imagen = $request->file('imagen')->store('public/gestionescdr');
             }
         $gestione->save();
-        return 'SE GUARDO CON EXITO LA GESTIÓN INSTITUCIONAL CDR SAN JOSE LA VICTORIA VALLE DEL CAUCA';
+        return redirect()->route('gestion.index')->with('success', 'SE GUARDO CON ÉXTO LA GESTIÓN A LA INSTITUCIÓN');
     }
 
     public function show($id)
@@ -78,8 +78,8 @@ class GestionController extends Controller
         $gestione->save();
 
         // Redirigir al usuario con un mensaje de éxito
-        return 'LA GESTION SE ACTUALIZO CON EXITO';
-        return redirect()->route('gestion.index')->with('success', 'Gestión actualizada con éxito.');
+
+        return redirect()->route('gestion.index')->with('success', 'GESTIÓN ACTUALIZADA CON ÉXITO.');
         // Lógica para actualizar un elemento específico
     }
 
@@ -97,7 +97,7 @@ class GestionController extends Controller
         $gestione->delete();
 
         // Redirigir al usuario con un mensaje de éxito
-        return 'Gestión eliminada con éxito.';
+        return redirect()->route('gestion.index')->with('success', 'SE ELIMINO CON ÉXITO LA GESTIÓN A LA INSTITUCIÓN');
         // Lógica para eliminar un elemento específico
     }
 }

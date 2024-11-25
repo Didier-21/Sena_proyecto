@@ -1,8 +1,45 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Institucional</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            height: 100vh; /* Ajusta la altura para centrar verticalmente */
+        }
 
-@section('title', 'Crear Gestión Institucional')
+        .card {
+            width: 100%; /* Ancho completo */
+            max-width: 600px; /* Máximo ancho */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+            transition: transform 0.2s; /* Transición suave */
+        }
 
-@section('contenido')
+        .card:hover {
+            transform: scale(1.02); /* Efecto de escala al pasar el ratón */
+        }
+
+        .card-header {
+            background-color: #0ead0e; /* Color de fondo */
+            color: white; /* Color del texto */
+        }
+
+        .form-control,
+        .form-control-file {
+            border-radius: 10px; /* Bordes redondeados en los campos */
+        }
+
+        button {
+            border-radius: 10px; /* Bordes redondeados en el botón */
+        }
+    </style>
+</head>
+<body>
     <div class="container mt-5">
         <div class="card">
             <div class="card-header">
@@ -51,4 +88,8 @@
             </div>
         </div>
     </div>
-@endsection
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

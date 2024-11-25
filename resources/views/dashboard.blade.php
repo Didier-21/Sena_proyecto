@@ -235,9 +235,7 @@
         </div>
     </div>
 </div>
-@if(Auth::check() && Auth::user()->email === 'poljaho@gmail.com')
-    <a href="/practicas/create" class="btn btn-primary">CREAR PRACTICA AGROPECUARIA</a>
-@endif
+
 
 
 
