@@ -10,8 +10,9 @@ class PracticaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $request->user()->authorizeRoles(['admin']);
        $practice = Practica::all();
        return view('practicas.index', compact('practice')); //
     }
@@ -19,8 +20,9 @@ class PracticaController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
+        $request->user()->authorizeRoles(['admin']);
         return view('practicas.create');
         //
     }
@@ -30,6 +32,7 @@ class PracticaController extends Controller
      */
     public function store(Request $request)
     {
+        $request->user()->authorizeRoles(['admin']);
         $practice= new Practica();
         $practice->tipo_proyecto = $request->input('tipo_proyecto');
         $practice->grado = $request->input('grado');
@@ -44,8 +47,9 @@ class PracticaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Request $request, string $id)
     {
+        $request->user()->authorizeRoles(['admin']);
         $practice = Practica::find($id);
         return view('practicas.show', compact('practice'));
     }
@@ -53,8 +57,9 @@ class PracticaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Request $request, string $id)
     {
+        $request->user()->authorizeRoles(['admin']);
         $practice = Practica::find($id);
         return view('practicas.edit',compact('practice'));//
     }
@@ -64,6 +69,7 @@ class PracticaController extends Controller
      */
     public function update(Request $request, string $id)
 {
+    $request->user()->authorizeRoles(['admin']);
     $practice = Practica::findOrFail($id);
 
     // Actualizar los campos con los datos del formulario.
@@ -85,8 +91,9 @@ class PracticaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request, string $id)
     {
+        $request->user()->authorizeRoles(['admin']);
          // Buscar la práctica correspondiente al ID.
     $practice = Practica::findOrFail($id);
 

@@ -8,20 +8,23 @@ use Illuminate\Support\Facades\Storage;
 
 class GestionController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $request->user()->authorizeRoles(['admin']);
         $gestione = Gestion::all();
         return view('gestion.index', compact('gestione'));
 
     }
 
-    public function create()
+    public function create(Request $request)
     {
+        $request->user()->authorizeRoles(['admin']);
         return view('gestion.create');
     }
 
     public function store(Request $request)
     {
+        $request->user()->authorizeRoles(['admin']);
         // Lógica para almacenar un nuevo elemento
         $gestione= new Gestion();
         $gestione->tipo = $request->input('tipo');
@@ -36,16 +39,17 @@ class GestionController extends Controller
         return redirect()->route('gestion.index')->with('success', 'SE GUARDO CON ÉXTO LA GESTIÓN A LA INSTITUCIÓN');
     }
 
-    public function show($id)
+    public function show(Request $request,$id)
     {
-
+        $request->user()->authorizeRoles(['admin']);
         $gestione = Gestion::find($id);
         return view('gestion.show', compact('gestione'));
         // Lógica para mostrar un elemento específico
     }
 
-    public function edit($id)
+    public function edit(Request $request,$id)
     {
+        $request->user()->authorizeRoles(['admin']);
         $gestione = Gestion::find($id);
         return view('gestion.edit',compact('gestione'));
 
@@ -54,6 +58,7 @@ class GestionController extends Controller
 
     public function update(Request $request, $id)
     {
+        $request->user()->authorizeRoles(['admin']);
         $gestione = Gestion::findOrFail($id);
 
         // Actualizar los campos del modelo
@@ -83,8 +88,9 @@ class GestionController extends Controller
         // Lógica para actualizar un elemento específico
     }
 
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
+        $request->user()->authorizeRoles(['admin']);
         // Obtener el registro existente
         $gestione = Gestion::findOrFail($id);
 

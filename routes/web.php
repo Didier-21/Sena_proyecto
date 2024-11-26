@@ -22,6 +22,11 @@ Route::middleware(['auth'])->group(function () {
 // ->middleware('role:admin');
 
 Route::resource('/practicas', PracticaController ::class);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/practicas', [PracticaController::class, 'index'])->name('practicas');
+    Route::resource('/practicas', PracticaController::class);
+});
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -35,6 +40,11 @@ Route::post('register', [RegisterController::class, 'register'])->name('register
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::resource('/gestion', GestionController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/gestion', [GestionController::class, 'index'])->name('gestion');
+    Route::resource('/gestion', GestionController::class);
+});
+
 
 
 // Ruta para la Misión
