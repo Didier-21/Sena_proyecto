@@ -14,12 +14,30 @@ class PageController extends Controller
     public function vision()
     {
         return view('vision'); // Retorna la vista para Visión
+
+    }
+
+     public function estudiantew()
+    {
+        return view('estudiantew'); // Retorna la vista para perfil del estudiante
+
+    }
+
+public function perfildocente()
+    {
+        return view('perfildocente'); // Retorna la vista para perfil del docente
+
+    }
+public function filosofia()
+    {
+        return view('filosofia'); // Retorna la vista para filosofia institucional
     }
 
     public function logrosAcademicos()
     {
         return view('logros-academicos'); // Retorna la vista para Logros Académicos
     }
+
 
     public function gestionJuridica()
     {

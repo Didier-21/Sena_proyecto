@@ -29,11 +29,14 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Como es
+                                Quienes somos
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{ route('mision') }}">Misión</a></li>
                                 <li><a class="dropdown-item" href="/vision">Visión</a></li>
+                                <li><a class="dropdown-item" href="/estudiantew">Perfil del Estudiante</a></li>
+                                <li><a class="dropdown-item" href="/perfildocente">Perfil del Docente</a></li>
+                                <li><a class="dropdown-item" href="/filosofia">Filosofía Institucional</a></li>
                                 <li><a class="dropdown-item" href="/logroaca">Logros académicos</a></li>
 
                             </ul>
@@ -110,24 +113,34 @@
                         <p><i class="fas fa-phone-alt"></i> (+57) 3113115990</p>
                         <p><i class="fas fa-envelope"></i> sanjose@valledelcauca.gov.co</p>
                         <p><i class="fas fa-map-marker-alt"></i> Corregimiento San José, La Victoria Valle</p>
-                        <p><i class="fas fa-clock"></i> Lunes a Viernes: 7:00 AM - 3:00 PM</p>
+                        <p><i class="fas fa-clock"></i> Lunes a Viernes: 7:00 AM - 4:00 PM</p>
                     </div>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.valledelcauca.gov.co/documentos/12569/calendario-academico/"
-                                class="text-light text-decoration-none"><i
-                                    class="fas fa-calendar-alt me-2"></i>Calendario
-                                Académico</a></li>
-                        <li><a href="/gestion-juridica" class="text-light text-decoration-none"><i
-                                    class="fas fa-user-graduate me-2"></i>Juridica</a></li>
-                        <li><a href="https://consultas.bibliovalle.gov.co/cgi-bin/koha/opac-user.pl"
-                                class="text-light text-decoration-none"><i class="fas fa-book me-2"></i>Biblioteca
-                                Virtual</a>
-                        </li>
-                    </ul>
+                   <h3>Enlaces Rápidos</h3>
+<ul class="list-unstyled">
+    <li>
+        <a href="https://www.valledelcauca.gov.co/documentos/12569/calendario-academico/" class="text-light text-decoration-none">
+            <i class="fas fa-calendar-alt me-2"></i>Calendario Académico
+        </a>
+    </li>
+    <li>
+        <a href="/gestion-juridica" class="text-light text-decoration-none">
+            <i class="fas fa-user-graduate me-2"></i>Juridica
+        </a>
+    </li>
+    <li>
+        <a href="https://consultas.bibliovalle.gov.co/cgi-bin/koha/opac-user.pl" class="text-light text-decoration-none">
+            <i class="fas fa-book me-2"></i>Biblioteca Virtual
+        </a>
+    </li>
+    <li>
+        <a href="https://www.valledelcauca.gov.co/publicaciones/60538/recepcion-de-solicitudes-pqrsd/" class="text-light text-decoration-none">
+            <i class="fas fa-headset me-2"></i>Atención a la Ciudadanía
+        </a>
+    </li>
+</ul>
                 </div>
 
                 <div class="footer-section">
@@ -162,7 +175,7 @@
             </div>
 
             <div class="copyright">
-                <p>© 2024 Institución Educativa San José. Todos los derechos reservados.</p>
+                <p>© 2025 Institución Educativa San José. Todos los derechos reservados.</p>
             </div>
 
             <a href="https://wa.me/573113115990" class="whatsapp-button" target="_blank">

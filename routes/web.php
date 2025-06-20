@@ -53,6 +53,17 @@ Route::get('/mision', [PageController::class, 'mision'])->name('mision');
 // Ruta para la Visión
 Route::get('/vision', [PageController::class, 'vision'])->name('vision');
 
+// Ruta para el perfil del estudiante
+Route::get('/estudiantew', [PageController::class, 'estudiantew'])->name('estudiantew');
+
+// Ruta para el perfil del docente
+Route::get('/perfildocente', [PageController::class, 'perfildocente'])->name('perfildocente');
+
+// Ruta para el perfil del filosofia institucional
+Route::get('/filosofia', [PageController::class, 'filosofia'])->name('filosofia');
+
+
+
 // Ruta para Logros Académicos
 Route::get('/logroaca', [PageController::class, 'logrosAcademicos'])->name('logros.academicos');
 

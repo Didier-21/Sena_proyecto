@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/homeestudianterural.jpeg""/api/placeholder/600/400" alt="Estudiantes rurales"
+                    <img src="images/portadahome.jpeg""/api/placeholder/600/400" alt="Estudiantes rurales"
                         class="img-fluid rounded shadow">
                 </div>
             </div>
@@ -367,4 +367,6 @@
             </div>
         </div>
     </div>
+
+
 @endsection

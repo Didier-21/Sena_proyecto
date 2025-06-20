@@ -1,14 +1,14 @@
 
 @extends('layouts.app')
 
-@section('title', 'Dashboard - Institución Educativa Agropecuaria')
+@section('title', 'VISIÓN - Institución Educativa Agropecuaria')
 
 @section('contenido')
-<link rel="stylesheet" href="style/css/vision.css">
+<link rel="stylesheet" href="style/css/mision.css">
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="vision-card card shadow-lg border-0 mb-5">
+                <div class="mision-card card shadow-lg border-0 mb-5">
                     <div class="card-body p-5">
                         <h1 class="mision-title text-center mb-4">
                             Visión de la Institución Educativa San José
@@ -17,17 +17,21 @@
                             <hr class="divider">
                         </div>
 
-                        <div class="vision-content">
+                        <div class="mision-content tex-align" style="text-align: justify;">
                             <p class="lead mb-0">
-                                PROPORCIONAR UNA EDUCACIÓN INTEGRAL BASADA EN VALORES, CON UN ENFOQUE SOSTENIBLE Y UNA FORMACIÓN TÉCNICA ESPECIALIZADA EN EL SECTOR AGROPECUARIO, QUE FOMENTE EL CRECIMIENTO PERSONAL Y PROFESIONAL DE LOS ESTUDIANTES, IMPULSANDO SU COMPROMISO CON LA CONSERVACIÓN DEL MEDIO AMBIENTE Y EL DESARROLLO DE LA COMUNIDAD. BUSCAMOS FORMAR LÍDERES CAPACES DE CONTRIBUIR ACTIVAMENTE AL PROGRESO AGROPECUARIO, ADAPTÁNDOSE A LOS CAMBIOS SOCIALES Y TECNOLÓGICOS, Y QUE SE DESTAQUEN POR SUS LOGROS
+                               En 2026 seremos reconocidos por la calidad académica y la formación integral de nuestros egresados Bachilleres Técnicos Agropecuarios, lideres por el aporte tecnológico a nuestras comunidades rurales, articulados con entidades educativas afines con la especialidad, en pro del mejoramiento de la calidad de vida; a través del modelo pedagógico conceptual y las competencias laborales, el respeto total por lo público, lo privado, la diversidad biológica, étnica, de género y el medio ambiente.
+ ambiente.
+
+
+
                             </p>
                         </div>
 
                         <div class="text-center mt-4">
                             <p class="lead mb-0 text-center">
-                            <a href="javascript:history.back()" class="btn btn-primary btn-lg px-5 return-button">
-                                <i class="fas fa-arrow-left me-2"></i>Regresar
-                            </a>
+                                <a href="javascript:history.back()" class="btn btn-primary btn-lg px-5 return-button">
+                                    <i class="fas fa-arrow-left me-2"></i>Regresar
+                                </a>
                         </div>
                     </div>
                 </div>
@@ -35,3 +39,4 @@
         </div>
     </div>
 @endsection
+
