@@ -21,9 +21,12 @@
                     <div class="card h-100 shadow-lg border-0">
                         <img src="images/logrotecnologia.jpeg" class="card-img-top" alt="Tecnología Educativa">
                         <div class="card-body">
-                            <h5 class="card-title">Implementación de Tecnología Educativa</h5>
+                            <h5 class="card-title">Remodelación Aula Multiple Educativa</h5>
                             <p class="card-text">
-                                Gracias a la visión y liderazgo de nuestro equipo directivo, hemos implementado tecnologías educativas avanzadas, mejorando el acceso y la calidad del aprendizaje para nuestros estudiantes.
+                               Nuestra IE San José está siendo remodelada a través del consorcio EJA y por medio del FIE se está realizando intervención en el cambio de cubierta del aula múltiple con  su parte eléctrica.
+Esto nos permite ofrecer una experiencia aún más enriquecedora para nuestros estudiantes y así crear un entorno que inspire la creatividad, el aprendizaje y el crecimiento.
+Queremos que nuestros estudiantes se sientan orgullosos de estudiar aquí y que nuestros padres de familia se sientan seguros de que sus hijos están recibiendo la mejor educación posible en espacios agradables de aprendizaje.
+El aula múltiple es un espacio de estudio y trabajo colaborativo que fomenta la innovación y la creatividad en actividades grupales mediante actos culturales, reuniones, ceremonias de graduación, ferias de emprendimiento, centros de interés, izadas de bandera, promoción  de valores etc.
                             </p>
                         </div>
                     </div>

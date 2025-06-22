@@ -24,8 +24,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/portadahome.jpeg""/api/placeholder/600/400" alt="Estudiantes rurales"
-                        class="img-fluid rounded shadow">
+                  <img src="https://scontent.fclo14-1.fna.fbcdn.net/v/t39.30808-6/507074065_2592943171060588_5062215143233625806_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHCm05Y87T8LbPfdDYjfWMxFeA0oEQ6cCcV4DSgRDpwJ2QDaF_OlpWVFiGBFzLqcCs&_nc_ohc=D7Cw3vPF2oUQ7kNvwG9dNbx&_nc_oc=Adn8Gv26sm5sKZFvQjUELLwAnSskzvJSeBEhjKd5ZONvWrp8MDlxgOyoDZJQzoVxFRo&_nc_zt=23&_nc_ht=scontent.fclo14-1.fna&_nc_gid=SMUU-sksE0dgKGJaQsRXyg&oh=00_AfPACavmCQRde6EQUUqGXV8NPWibSyOe9-TXIU4LGPyybQ&oe=685D2A33"
+     alt="Estudiantes rurales"
+     width="400"
+     height="400" />
+
                 </div>
             </div>
         </div>
@@ -203,7 +206,8 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 hover-shadow">
-                        <img src= "images/homeprimaria.jpeg""/api/placeholder/300/200" class="card-img-top"
+                        <img src= "https://i.ibb.co/rG6RCnKr/Whats-App-Image-2025-06-13-at-17-35-24.jpg" width="100"
+     height="100" class="card-img-top"
                             alt="Primaria">
                         <div class="card-body">
                             <h5 class="card-title">Primaria</h5>
@@ -213,7 +217,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 hover-shadow">
-                        <img src="images/homesecundaria.jpeg""/api/placeholder/300/200" class="card-img-top"
+                        <img src="https://i.ibb.co/352hDHGW/Whats-App-Image-2025-06-13-at-16-43-56.jpg""/api/placeholder/300/200" class="card-img-top"
                             alt="Secundaria">
                         <div class="card-body">
                             <h5 class="card-title">Secundaria</h5>
@@ -223,7 +227,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 hover-shadow">
-                        <img src="images/homegraduado.jpeg"/api/placeholder/300/200" class="card-img-top"
+                        <img src="https://i.ibb.co/s9y72JDM/Whats-App-Image-2025-06-13-at-16-43-56-3.jpg"/api/placeholder/300/200" class="card-img-top"
                             alt="Técnico Agropecuario">
                         <div class="card-body">
                             <h5 class="card-title">Técnico Agropecuario</h5>
@@ -233,7 +237,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 hover-shadow">
-                        <img src="images/homeproyectoespecial.jpeg"/api/placeholder/300/200" class="card-img-top"
+                        <img src="https://i.ibb.co/k6V2yrTf/Whats-App-Image-2025-06-13-at-16-43-57.jpg"/api/placeholder/300/200" class="card-img-top"
                             alt="Proyectos Especiales">
                         <div class="card-body">
                             <h5 class="card-title">Proyectos Especiales</h5>
@@ -252,11 +256,11 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 hover-shadow">
-                        <img src="images/homeciencias.jpeg" class="card-img-top" alt="Noticia 1">
+                        <img src="https://scontent.fclo14-1.fna.fbcdn.net/v/t39.30808-6/506005177_2591257627895809_4556550320592615848_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFpXxXbZi0oepWOU9HrEsXtFmHqxVT9Bk4WYerFVP0GTtx2xKUnAJxdPfxFv9M9wno&_nc_ohc=qx2p51fNUeYQ7kNvwG4HPMb&_nc_oc=Adn9aIDMQjs4tFLLbHsmFdGJaPEhcFEvZ2mx9gdZSW_UQh3O2srWSHVQbjQU4YOeHzc&_nc_zt=23&_nc_ht=scontent.fclo14-1.fna&_nc_gid=xIjqJtOCkm0-ILUp1XJJaw&oh=00_AfP4JW_ZkpcCSRxwIh-52OGZAQf8JKmksgThnIuOm1Ceyw&oe=685D0583" class="card-img-top" alt="Noticia 1">
                         <div class="card-body">
                             <div class="badge bg-success mb-2">Académico</div>
-                            <h5 class="card-title">Nuevo Proyecto Agrícola</h5>
-                            <p class="card-text">Estudiantes inician proyecto de cultivos hidropónicos...</p>
+                            <h5 class="card-title">Celebración día del medio ambiente </h5>
+                            <p class="card-text">Los estudiantes del grado décimo de nuestra Institución...</p>
                             <a href="#" class="btn btn-outline-success" data-bs-toggle="modal"
                                 data-bs-target="#modalNoticia1">Leer más</a>
                         </div>
@@ -264,11 +268,12 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100 hover-shadow">
-                        <img src="images/homenuevoproyecto.jpeg" class="card-img-top" alt="Noticia 2">
+                        <img src="https://i.ibb.co/xtkk95rC/Whats-App-Image-2025-06-13-at-17-35-24-2.jpg" class="card-img-top" alt="Noticia 2">
                         <div class="card-body">
                             <div class="badge bg-primary mb-2">Eventos</div>
-                            <h5 class="card-title">Feria de la Ciencia Rural</h5>
-                            <p class="card-text">Gran éxito en la primera feria científica...</p>
+                            <h5 class="card-title">Celebración Día del Estudiante</h5>
+                            <p class="card-text">¡Celebramos el Día del Estudiante en las sedes Antonio Nariño y Antonia Santos!
+</p>
                             <a href="#" class="btn btn-outline-success" data-bs-toggle="modal"
                                 data-bs-target="#modalNoticia2">Leer más</a>
                         </div>
@@ -276,11 +281,11 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100 hover-shadow">
-                        <img src="images/homealianza.jpeg" class="card-img-top" alt="Noticia 3">
+                        <img src="https://i.ibb.co/xqP40H47/foro-educativo.jpg" class="card-img-top" alt="Noticia 3">
                         <div class="card-body">
-                            <div class="badge bg-warning mb-2">Comunidad</div>
-                            <h5 class="card-title">Alianza con Cooperativa Local</h5>
-                            <p class="card-text">Nueva alianza para fortalecer la educación rural...</p>
+                            <div class="badge bg-warning mb-2">Interno</div>
+                            <h5 class="card-title">Primer Foro Educativo.</h5>
+                            <p class="card-text">La institución Educativa San José de La Victoria Valle, hoy llevó a cabo...</p>
                             <a href="#" class="btn btn-outline-success" data-bs-toggle="modal"
                                 data-bs-target="#miModal">Leer más</a>
                         </div>
@@ -295,19 +300,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalNoticia1Label">Nuevo Proyecto Agrícola</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="modalNoticia1Label">Medio Ambiente.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                 </div>
-                <div class="modal-body">
-                    El reciente proyecto de cultivos hidropónicos iniciado por los estudiantes de la Institución Educativa
-                    San José marca un hito en la adopción de técnicas avanzadas de agricultura sostenible. Este innovador
-                    proyecto no solo les permite a los estudiantes adquirir conocimientos prácticos sobre el cultivo sin
-                    suelo, utilizando soluciones nutritivas para el crecimiento de las plantas, sino que también promueve el
-                    desarrollo de competencias en gestión agrícola y sostenibilidad ambiental. A través de este enfoque
-                    educativo, se fomenta una comprensión profunda de la importancia de conservar los recursos naturales y
-                    de la eficiencia en la producción de alimentos, preparando a los futuros líderes para enfrentar los
-                    desafíos del sector agropecuario con soluciones creativas y ecológicas.
-                </div>
+               <div class="modal-body" style="text-align: justify; text-justify: distribute; line-height: 1.6; word-spacing: 4px;">
+  <p>Nuestros estudiantes del grado décimo lideran la celebración del Día del Medio Ambiente.</p>
+  <p>En nuestra institución educativa, nos unimos para reflexionar sobre la importancia de cuidar nuestro planeta y promover prácticas sostenibles. Los estudiantes lideraron actividades lúdicas y educativas para crear conciencia sobre la importancia de proteger el medio ambiente y cómo podemos contribuir a su conservación. Para ello, se valieron de juegos y dinámicas sobre el cuidado del medio ambiente, utilización  de materiales educativos sobre sostenibilidad, competencias sobre cuánto sabes del medio ambiente, actividades de reciclaje y reutilización de materiales, sensibilización a través de canciones alusivas al medio ambiente y nuestro planeta.</p>
+  <p>¡Felicitaciones a nuestros estudiantes por su compromiso con el medio ambiente!</p>
+</div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
@@ -320,20 +320,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalNoticia2Label">Feria de la Ciencia Rural</h5>
+                    <h5 class="modal-title" id="modalNoticia2Label">Día del Estudiante.</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    La Institución Educativa San José celebra con orgullo el gran éxito de su primera feria científica, un
-                    evento que se convirtió en un escenario vibrante para la presentación de proyectos innovadores enfocados
-                    en el desarrollo sostenible. Los estudiantes, con gran dedicación y creatividad, expusieron diversas
-                    iniciativas que abordan problemas ambientales y agrícolas mediante soluciones tecnológicas avanzadas y
-                    prácticas sostenibles. Desde sistemas de riego eficientes hasta energías renovables y técnicas de
-                    reciclaje, cada proyecto destacó por su potencial impacto positivo en la comunidad y el entorno. Este
-                    logro no solo refleja el compromiso de los estudiantes con la sostenibilidad, sino también su capacidad
-                    para transformar sus conocimientos en acciones concretas que contribuyen a un futuro más verde y
-                    sostenible. La feria no solo inspiró a los participantes, sino también a los asistentes, reafirmando el
-                    papel fundamental de la educación en el desarrollo de nuevas generaciones conscientes y responsables.
+                    Hoy nos reunimos para celebrar a nuestros estudiantes de primaria del corregimiento de Holguín su dedicación al aprendizaje. La izada de bandera es um momento emotivo que nos recuerda nuestra Patria, es un momento especial para reflexionar sobre la importancia de la educación y el papel que jugamos en la formación de nuestros niños.
+                    Estudiantes, ustedes son nuestra razón de ser!!!
+                    !Felicitaciones!
+                    Esperamos que hayan disfrutado de esta celebración y que sigan trabajando duro para alcanzar sus metas.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -348,18 +342,12 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="miModalLabel">Alianza con Cooperativa Local</h5>
+                    <h5 class="modal-title" id="miModalLabel">Foro Educativo.</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    La reciente alianza con la cooperativa local ha sido un hito significativo para la Institución Educativa
-                    San José, estableciendo un vínculo sólido que promete mejorar tanto la educación como el desarrollo
-                    comunitario. Esta colaboración tiene como objetivos principales fortalecer los recursos educativos,
-                    promover el emprendimiento entre los estudiantes, y fomentar proyectos que impulsen el desarrollo
-                    sostenible. Los beneficios incluyen acceso a recursos adicionales, oportunidades de prácticas y
-                    formación, así como el apoyo a iniciativas estudiantiles. En última instancia, esta alianza enriquecerá
-                    el aprendizaje de los estudiantes, desarrollando sus habilidades prácticas y preparándolos para
-                    convertirse en líderes comprometidos con su comunidad y el medio ambiente.
+                    La institución Educativa San José de La Victoria Valle, hoy llevó a cabo el foro Educativo institucional, con miras a pensar el aporte al Plan decenal de Educación 2026-2036.
+                    Cada ponencia y reflexión permitieron visibilizar una postura crítica frente a la educación rural  y la política educativa en las ruralidades colombianas.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

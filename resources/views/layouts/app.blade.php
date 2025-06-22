@@ -146,7 +146,7 @@
                 <div class="footer-section">
                     <h3>Síguenos</h3>
                     <div class="social-buttons">
-                        <a href="https://facebook.com/" class="social-btn facebook" target="_blank">
+                        <a href="https://www.facebook.com/san.jose.cdr.2025" class="social-btn facebook" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                             Facebook
                         </a>

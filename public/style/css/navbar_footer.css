@@ -107,7 +107,7 @@
 /* Estilos para el texto del usuario */
 
 .text-white {
-   color: rgb(185, 184, 180); /* Color del texto */
+   color: rgb(182, 180, 185); /* Color del texto */
    margin-right: 10px; /* Espacio a la derecha */
    font-size: 14px; /* Tamaño del texto */
 }
