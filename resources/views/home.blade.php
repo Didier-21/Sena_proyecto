@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                  <img src="https://scontent.fclo14-1.fna.fbcdn.net/v/t39.30808-6/507074065_2592943171060588_5062215143233625806_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHCm05Y87T8LbPfdDYjfWMxFeA0oEQ6cCcV4DSgRDpwJ2QDaF_OlpWVFiGBFzLqcCs&_nc_ohc=D7Cw3vPF2oUQ7kNvwG9dNbx&_nc_oc=Adn8Gv26sm5sKZFvQjUELLwAnSskzvJSeBEhjKd5ZONvWrp8MDlxgOyoDZJQzoVxFRo&_nc_zt=23&_nc_ht=scontent.fclo14-1.fna&_nc_gid=SMUU-sksE0dgKGJaQsRXyg&oh=00_AfPACavmCQRde6EQUUqGXV8NPWibSyOe9-TXIU4LGPyybQ&oe=685D2A33"
+                 <img src="https://i.ibb.co/1YzJrmy6/507074065-2592943171060588-5062215143233625806-n.jpg"
      alt="Estudiantes rurales"
      width="400"
      height="400" />

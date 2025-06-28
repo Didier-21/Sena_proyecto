@@ -26,11 +26,13 @@
                         </div>
 
                         <div class="text-center mt-4">
-    <p class="lead mb-0 text-center">
-        <a href="javascript:history.back()" class="btn btn-primary return-button" style="padding: 0.25rem 0.75rem; font-size: 1rem; font-weight: normal;">
-            <i class="fas fa-arrow-left me-2"></i>Regresar
-        </a>
-    </p>
+                            <p class="lead mb-0 text-center">
+                                <a href="javascript:history.back()" class="btn btn-primary btn-lg px-5 return-button">
+                                    <i class="fas fa-arrow-left me-2"></i>Regresar
+                                </a>
+
+
+
                         </div>
                     </div>
                 </div>

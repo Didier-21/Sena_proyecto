@@ -1,101 +1,148 @@
-/* Estilos para la tarjeta de misión */
+/* -----------------------------------------------
+   Estilos generales para la tarjeta de misión
+-------------------------------------------------*/
 .mision-card {
-    border-radius: 15px !important;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-    animation: fadeIn 1s ease;
-    background-color: #b0e4bb;
+    border-radius: 15px !important;                          /* Bordes redondeados */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Sombra */
+    background-color: #b0e4bb;                                /* Fondo verde claro */
+    opacity: 0;                                               /* Inicia invisible */
+    transform: perspective(800px) translateZ(50px) rotateX(10deg); /* Efecto 3D inicial */
+    animation: fadeIn3D 1.5s ease forwards;                   /* Animación al cargar */
 }
 
-/* Estilos para el título */
+/* -----------------------------------------------
+   Título principal
+-------------------------------------------------*/
 .mision-title {
-    color: #0a0a72 !important;
+    color: #0a0a72 !important;  /* Azul oscuro */
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 2rem;
 }
 
-/* Línea divisora */
+/* -----------------------------------------------
+   Línea divisora
+-------------------------------------------------*/
 .divider {
     width: 90%;
     height: 5px;
-    background-color: #ddcb06;
+    background-color: #ddcb06; /* Amarillo */
     margin: 2rem auto;
     border: none;
 }
 
-/* Contenedor de la misión */
+/* -----------------------------------------------
+   Contenedor de la misión
+-------------------------------------------------*/
 .mision-content {
-    background-color: #c5ecb0;
+    background-color: #c5ecb0; /* Verde más claro */
     padding: 2rem;
     border-radius: 50px;
-    border-left: 5px #91c296;
     margin: 2rem 0;
+    border-left: 5px solid #91c296; /* Línea decorativa a la izquierda */
 }
 
+/* Texto del párrafo dentro del contenedor */
 .mision-content p {
-    line-height: 1,4;
+    line-height: 1.4; /* Separación de líneas */
     color: #010710;
     font-size: 1.2rem;
     font-weight: bold;
     font-style: italic;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-
 }
 
-/* Estilos para el botón */
+/* -----------------------------------------------
+   Botón "Regresar" mejorado con colores naturales
+-------------------------------------------------*/
 .return-button {
-    background-color: #0906d1 !important;
-    border-color: hsl(0, 91%, 43%) !important;
-    padding: 0.75rem 2rem !important;
-    font-weight: 600;
-    transition: all 3s ease;
+    background-color: #14b421 !important;           /* Verde brillante */
+    border: 2px solid #5e8851 !important;           /* Borde verde más oscuro */
+    display: inline-flex;                           /* Cambio a inline-flex para ajuste automático */
+    align-items: center;                            /* Centrar verticalmente */
+    justify-content: center;                        /* Centrar horizontalmente */
+    padding: 0.3rem 0.6rem !important;             /* Padding aún más compacto para óvalo pequeño */
+    font-size: 0.8rem;                             /* Texto más pequeño */
+    font-weight: 600;                              /* Peso más bold para resaltar */
+    border-radius: 50px !important;                /* Bordes totalmente redondos */
+    color: #ffffff !important;                      /* Color del texto blanco puro y resaltado */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);   /* Sombra de texto para resaltar más */
+    transition: all 0.3s ease;                     /* Transición suave */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);     /* Sombra sutil y natural */
+    margin: 1.5rem auto;                           /* Centrado horizontal con margen */
+    width: fit-content;                            /* Ajustar al contenido exacto */
+    min-width: auto;                               /* Sin ancho mínimo */
+    text-decoration: none;                         /* Sin subrayado */
+    cursor: pointer;                               /* Cursor pointer */
+    white-space: nowrap;                           /* Evitar que el texto se divida en líneas */
 }
 
+/* Efecto hover del botón - más sutil y natural */
 .return-button:hover {
-    background-color: #b7c706 !important;
-    border-color: #3f0303 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #230e9b !important;          /* Azul al hover */
+    border-color: #c30aa4 !important;              /* Borde rosado */
+    transform: translateY(-1px);                   /* Movimiento sutil hacia arriba */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);     /* Sombra un poco más pronunciada */
+    color: #ffffff !important;                     /* Mantener texto blanco resaltado */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);   /* Intensificar sombra del texto en hover */
 }
 
-.return-button {
-    margin: 2rem 0;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-/* Animación de entrada */
-@keyframes fadeIn {
-    from {
-        opacity: 20;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 30;
-        transform: translateY(14);
-    }
+/* Efecto active/click del botón */
+.return-button:active {
+    transform: translateY(0px);                    /* Volver a posición original */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);     /* Sombra reducida */
 }
 
-/* Estilos responsivos */
-@media (max-width: 900px) {
-    .mision-title {
-        font-size: 2rem;
-    }
+/* Efecto focus para accesibilidad */
+.return-button:focus {
+    outline: none;                                 /* Quitar outline por defecto */
+    box-shadow: 0 0 0 3px rgba(125, 132, 113, 0.3); /* Outline personalizado */
+}
 
-    .mision-content {
-        padding: 1.5rem;
-    }
+/* Asegurar que el icono esté bien alineado */
+.return-button i {
+    margin-right: 0.4rem;                          /* Espacio entre icono y texto más compacto */
+    font-size: 0.75rem;                           /* Tamaño del icono más pequeño */
+}
 
-    .return-button {
-        padding: 0.5rem 1.5rem !important;
+
+/* -----------------------------------------------
+   Animación de entrada en 3D
+-------------------------------------------------*/
+@keyframes fadeIn3D {
+    0% {
+        opacity: 0;
+        transform: perspective(800px) translateZ(50px) rotateX(10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(800px) translateZ(0) rotateX(0deg);
     }
 }
 
+/* -----------------------------------------------
+   Fondo de la página
+-------------------------------------------------*/
 body {
-    background-image: url('https://media.easy-peasy.ai/88d46d33-cc99-4bad-89c0-47bcf05cf8d0/1d81cdf6-0946-4908-9805-59376fd49dda.png');
+    background-image: url('https://i.ibb.co/B57st0VN/Whats-App-Image-2025-06-27-at-18-58-38.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
 
+/* -----------------------------------------------
+   Estilos responsivos para pantallas pequeñas
+-------------------------------------------------*/
+@media (max-width: 900px) {
+    .mision-title {
+        font-size: 2rem; /* Título más pequeño */
+    }
+
+    .mision-content {
+        padding: 1.5rem; /* Menos relleno */
+    }
+
+    .return-button {
+        padding: 0.5rem 1.5rem !important; /* Botón un poco más grande en móvil */
+    }
+}

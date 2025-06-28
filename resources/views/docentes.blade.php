@@ -230,7 +230,7 @@
                 <div class="teacher-card">
                     <div class="card border-0 shadow h-100">
                         <div class="teacher-image-container">
-                            <img src="{{ asset('images/doceespañol.jpeg') }}" class="card-img-top"
+                            <img src="https://i.ibb.co/vvZwCy0N/Whats-App-Image-2025-06-27-at-18-58-36.jpg"
                                 alt="Docente de Lenguaje">
                             <div class="teacher-overlay">
                                 <div class="overlay-content">
