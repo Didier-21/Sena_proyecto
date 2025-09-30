@@ -5,34 +5,250 @@
 
 @section('contenido')
 <link rel="stylesheet" href="style/css/home.css">
-    <!-- Hero Section con Bienvenida -->
-    <header class="hero min-vh-100 d-flex align-items-center bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h1 class="display-3 fw-bold text-success">Bienvenidos a la IE San José</h1>
-                <p class="lead">Formando el futuro del campo colombiano con educación de calidad</p>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="p-4 bg-white rounded shadow">
-                        <h2 class="h3 text-success mb-4">Educación Rural de Calidad</h2>
-                        <p class="lead">Formando líderes para el desarrollo del campo colombiano</p>
-                        <div class="d-flex gap-2">
-                            <a href="#proyectos" class="btn btn-success">Nuestros Proyectos</a>
-                            <a href="#noticias" class="btn btn-outline-success">Últimas Noticias</a>
-                        </div>
+
+<!-- Hero Section con Bienvenida -->
+<header class="hero min-vh-100 d-flex align-items-center position-relative overflow-hidden">
+    <!-- Imagen de fondo con animación -->
+    <div class="hero-bg"></div>
+
+    <div class="container position-relative text-center">
+        <div class="mb-5">
+            <h1 class="hero-title fw-bold">
+                Bienvenidos a la IE San José
+            </h1>
+            <p class="hero-subtitle mt-3">
+                Formando el futuro del campo colombiano con educación de calidad
+            </p>
+        </div>
+    </div>
+</header>
+
+<style>
+/* Fondo con efecto de zoom in/out */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.ibb.co/KT0kS8T/Whats-App-Image-2025-06-27-at-18-58-17.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: zoomEffect 20s infinite alternate ease-in-out;
+    z-index: 0;
+}
+
+/* Animación de acercarse y alejarse */
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Texto con fondo animado */
+.hero-title {
+    font-size: 5rem; /* Mucho más grande */
+   background: linear-gradient(270deg, #00c853, #64dd17, #aeea00, #b2ff59, #1de9b6);
+    background-size: 1000% 1000%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 10s ease infinite;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Subtítulo con animación más discreta */
+.hero-subtitle {
+    font-size: 2rem;
+    color: #111; /* Negro para contraste */
+    font-weight: 600;
+}
+
+/* Animación del degradado */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Asegurar que el texto quede encima */
+.hero .container {
+    z-index: 1;
+}
+</style>
+
+
+    </header>
+
+<<!-- Slider de Imágenes -->
+<section id="slider" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Momentos Destacados de nuestra Institución</h2>
+        <div id="carouselEventos" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Imagen 1 -->
+                <div class="carousel-item active">
+                    <img src="https://i.ibb.co/9mNL4PnW/536270288-2667321036956134-2226103858997565824-n.jpg"
+                         class="d-block w-50 mx-auto rounded shadow" alt="Evento 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Jornada de Siembra y aprendizaje laboral.</h5>
+                        <p>Un espacio para el aprendizaje y la integración de los estudiantes, quienes pudierón entender el valor y la importancia del campo y el trabajo duro y honesto.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                 <img src="https://i.ibb.co/1YzJrmy6/507074065-2592943171060588-5062215143233625806-n.jpg"
-     alt="Estudiantes rurales"
-     width="400"
-     height="400" />
 
+                <!-- Imagen 2 -->
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co/Rk7ztN0P/548213214-2678764245811813-8052769814936650191-n.jpg"
+                         class="d-block w-50 mx-auto rounded shadow" alt="Evento 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Evento Cultural  y de Arte </h5>
+                        <p>Celebramos con nuestros estudiantes un gran evento que dejo al descubierto talentos futuros.</p>
+                    </div>
+                </div>
+
+                <!-- Imagen 3 -->
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co/vvcZrScN/549987790-2678555022499402-7011761675605261318-n.jpg"
+                         class="d-block w-50 mx-auto rounded shadow" alt="Evento 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Proyecto Alimentos Saludable.</h5>
+                        <p>Impulsando el campo con iniciativas escolares sostenibles y alimentación saludable para nuestras futuras generaciones.</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEventos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEventos" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-    </header>
+    </div>
+</section>
+
+<style>
+/* Ajustes extra para el texto del slider */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 15px;
+    border-radius: 10px;
+}
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b2ff59; /* Verde atractivo */
+}
+.carousel-caption p {
+    font-size: 1rem;
+    color: #fff;
+}
+</style>
+
+
+<!-- Inscripciones Abiertas -->
+<section id="inscripciones" class="py-5 bg-success text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">¡Inscripciones Abiertas!</h2>
+        <p class="lead">Únete a nuestra comunidad educativa y transforma tu futuro</p>
+
+        <!-- Imágenes reducidas al 50% -->
+        <img src="https://i.ibb.co/RTSjs5M2/547682559-2677481015940136-2553244529621880858-n.jpg"
+             class="img-fluid rounded shadow mb-3 img-50" alt="Inscripciones">
+
+        <img src="https://i.ibb.co/6RMTmvw7/548034547-2677481019273469-5252615593919262342-n.jpg"
+             class="img-fluid rounded shadow mb-3 img-50" alt="Inscripciones">
+
+        <button class="btn btn-success" type="button" data-bs-toggle="modal"
+                        data-bs-target="#matriculaModal">INSCRIBETE AHORA</button>
+    </div>
+</section>
+
+<style>
+/* Reducir tamaño de imágenes al 50% */
+.img-50 {
+    width: 40%;
+    height: auto;
+}
+</style>
+
+
+<!-- Mejoras a las Instalaciones -->
+<section id="instalaciones" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Mejoras a las Instalaciones</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="https://i.ibb.co/aula.jpg" class="img-fluid rounded" alt="Aula renovada">
+                <p class="mt-2 text-center">Aulas renovadas con tecnología</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.ibb.co/cancha.jpg" class="img-fluid rounded" alt="Cancha deportiva">
+                <p class="mt-2 text-center">Nueva cancha deportiva</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.ibb.co/lab.jpg" class="img-fluid rounded" alt="Laboratorio">
+                <p class="mt-2 text-center">Laboratorio de ciencias equipado</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Actividades Académicas -->
+<section id="academicas" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Actividades Académicas</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="https://i.ibb.co/clase.jpg" class="img-fluid rounded" alt="Clase interactiva">
+                <p class="mt-2 text-center">Clases interactivas y participativas</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.ibb.co/proyecto.jpg" class="img-fluid rounded" alt="Proyecto escolar">
+                <p class="mt-2 text-center">Proyectos escolares innovadores</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.ibb.co/feria.jpg" class="img-fluid rounded" alt="Feria académica">
+                <p class="mt-2 text-center">Feria académica anual</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Actividades Artísticas y Recreativas -->
+<section id="artisticas" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Arte y Recreación</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="https://i.ibb.co/danza.jpg" class="img-fluid rounded" alt="Grupo de danza">
+                <p class="mt-2 text-center">Grupo de danza folclórica</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.ibb.co/pintura.jpg" class="img-fluid rounded" alt="Taller de pintura">
+                <p class="mt-2 text-center">Talleres de pintura y expresión artística</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.ibb.co/juegos.jpg" class="img-fluid rounded" alt="Juegos recreativos">
+                <p class="mt-2 text-center">Jornadas recreativas y deportivas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 
     <!-- Enlaces de Interés -->
     <section class="py-5 bg-white">

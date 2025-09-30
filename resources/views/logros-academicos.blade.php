@@ -136,9 +136,7 @@
 
 <div class="text-center align-bottom mt-4">
     <p class="lead mb-0 text-center">
-    <a href="javascript:history.back()" class="btn btn-primary btn-lg px-5 return-button">
-        <i class="fas fa-arrow-left me-2"></i>Regresar
-    </a>
+
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
